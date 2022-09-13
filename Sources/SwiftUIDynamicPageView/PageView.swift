@@ -17,7 +17,7 @@ public struct PageView<Selection: Hashable & Comparable, Content: View>: View {
     
     private let content: (Selection) -> Content
     
-    init(
+    public init(
         selection: Binding<Selection>,
         preparePreviousSelection: @escaping (Selection) -> Selection,
         prepareNextSelection: @escaping (Selection) -> Selection,
